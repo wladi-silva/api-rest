@@ -29,4 +29,9 @@ public class MovimentacaoService {
         return movimentacaoRepository.findById(id);
     }
 
+    @Transactional
+    public void deleteById(Long id) {
+        movimentacaoRepository.deleteById(id);;
+    }
+
 }
